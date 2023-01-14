@@ -1,8 +1,7 @@
 from Arduino import Arduino
 import time
 
-BLED = 9
-LIGHT = 0
+BLED, LIGHT = 9, 0 # const
 val = 0
 
 board = Arduino('9600')
