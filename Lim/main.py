@@ -1,11 +1,16 @@
 from Arduino import Arduino
 import time
 
-board = Arduino('9600')
-board.pinMode(13, "OUTPUT")
+BLED = 9
+LIGHT = 0
+val = 0
 
-while True:
-    board.digitalWrite(13, "LOW")
-    time.sleep(1)
-    board.digitalWrite(13, "HIGH")
-    time.sleep(1)
+board = Arduino('9600')
+board.pinMode(BLED, 'OUTPUT')
+board.pinMode(LIGHT, 'INPUT')
+
+while True :
+    val = board.analogRead(LIGHT)
+    print(val)
+    board.analogWrite(BLED, int((val*255)/600))
+    time.sleep(0.05)
