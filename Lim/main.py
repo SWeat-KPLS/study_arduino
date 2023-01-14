@@ -5,8 +5,8 @@ BLED, LIGHT = 9, 0 # const
 val = 0
 
 board = Arduino('9600')
-board.pinMode(BLED, 'OUTPUT')
-board.pinMode(LIGHT, 'INPUT')
+board.pinMode(BLED, 'OUTPUT') # LED
+board.pinMode(LIGHT, 'INPUT') # sensor
 
 while True :
     val = board.analogRead(LIGHT)
