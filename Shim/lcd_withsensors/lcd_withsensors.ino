@@ -1,7 +1,7 @@
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 #include <DHT.h>
-#define DHTPIN 2
+#define DHTPIN A1
 
 DHT dht(DHTPIN, DHT11);
 LiquidCrystal_I2C lcd(0x27, 16, 2);
