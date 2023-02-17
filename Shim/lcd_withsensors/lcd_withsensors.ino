@@ -33,11 +33,14 @@ void loop() {
   lcd.print("Temp: ");
   lcd.print(temperature);
   lcd.print("C ");
+  lcd.setCursor(0, 1);
   lcd.print("Hum: ");
   lcd.print(humidity);
   lcd.print("%");
+  delay(2000);
 
-  lcd.setCursor(0, 1);
+  lcd.clear();
+  lcd.setCursor(0, 0);
   lcd.print("Light: ");
   lcd.print(sensorValue);
 
