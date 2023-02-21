@@ -9,7 +9,7 @@ void setup() {
 void loop() {
   int sensorValue = analogRead(SENSOR_PIN);
 
-  if (sensorValue > 500) {
+  if (sensorValue > 150) {
     digitalWrite(LED_PIN, LOW);
     Serial.println("불이 켜져있습니다.");
   } else {

@@ -8,8 +8,8 @@ IRrecv irrecv(input_pin);
 decode_results signals;
 int first_input = 0;
 int second_input = 0;
-int flag = 1;       //1 is first input, 2 is second input
-int cal = 1;        //1 is +, 0 is -
+int flag = 1;       
+int cal = 1;        
 
 void calculating(int n){
   lcd.print(n);
